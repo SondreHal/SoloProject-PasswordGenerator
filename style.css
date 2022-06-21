@@ -8,11 +8,9 @@ body {
 .container {
 	font-family: "Karla";
 	margin: 20px auto;
-	width: 498px;
-	height: 435px;
+	width: 550px;
+	height: 550px;
 	background: #1f2937;
-	padding-top: 115px;
-	padding-left: 52px;
 }
 
 .green-text {
@@ -21,6 +19,8 @@ body {
 
 h1 {
 	margin: 0;
+	padding-top: 80px;
+	padding-left: 52px;
 	font-family: "Karla";
 	font-style: normal;
 	font-weight: 800;
@@ -33,17 +33,29 @@ h1 {
 h2 {
 	margin: 0;
 	margin-top: 10px;
+	padding-left: 52px;
 	color: #d5d4d8;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 28px;
 }
 
-.generate-btn {
+h3 {
+	margin: 10px auto;
+	text-align: center;
+
+	color: #d5d4d8;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+#generate-btn {
 	margin: 0;
 	margin-top: 51px;
+	margin-left: 52px;
 
 	display: flex;
 	flex-direction: row;
@@ -66,27 +78,30 @@ h2 {
 	line-height: 24px;
 }
 
-.generate-btn:hover {
+#generate-btn:hover {
 	background: #14da98;
 	cursor: pointer;
 }
 
-.generate-btn:active {
+#generate-btn:active {
 	background: #10b981;
 }
 
 .divide-line {
-	margin-block: 35px;
+	margin: 35px auto 0px auto;
 	width: 446px;
 	border: 1px solid #2f3e53;
 }
 
 .random-passwords {
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
+	margin-bottom: 24px;
 }
 
 .password-1 {
+	user-select: none;
 	margin: 0;
 	margin-right: 24px;
 	width: 211px;
@@ -103,6 +118,7 @@ h2 {
 }
 
 .password-2 {
+	user-select: none;
 	margin: 0;
 	width: 211px;
 	height: 39px;
@@ -115,4 +131,20 @@ h2 {
 	font-size: 16px;
 	line-height: 39px;
 	color: #55f991;
+}
+
+#password1:hover,
+#password2:hover,
+#password3:hover,
+#password4:hover {
+	cursor: pointer;
+	background-color: #32445c;
+}
+
+#password1:active,
+#password2:active,
+#password3:active,
+#password4:active {
+	cursor: pointer;
+	background-color: #273549;
 }

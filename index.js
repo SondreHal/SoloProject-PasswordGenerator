@@ -1,93 +1,99 @@
-const characters = [
-	"A",
-	"B",
-	"C",
-	"D",
-	"E",
-	"F",
-	"G",
-	"H",
-	"I",
-	"J",
-	"K",
-	"L",
-	"M",
-	"N",
-	"O",
-	"P",
-	"Q",
-	"R",
-	"S",
-	"T",
-	"U",
-	"V",
-	"W",
-	"X",
-	"Y",
-	"Z",
-	"a",
-	"b",
-	"c",
-	"d",
-	"e",
-	"f",
-	"g",
-	"h",
-	"i",
-	"j",
-	"k",
-	"l",
-	"m",
-	"n",
-	"o",
-	"p",
-	"q",
-	"r",
-	"s",
-	"t",
-	"u",
-	"v",
-	"w",
-	"x",
-	"y",
-	"z",
-	"0",
-	"1",
-	"2",
-	"3",
-	"4",
-	"5",
-	"6",
-	"7",
-	"8",
-	"9",
-	"~",
-	"`",
-	"!",
-	"@",
-	"#",
-	"$",
-	"%",
-	"^",
-	"&",
-	"*",
-	"(",
-	")",
-	"_",
-	"-",
-	"+",
-	"=",
-	"{",
-	"[",
-	"}",
-	"]",
-	",",
-	"|",
-	":",
-	";",
-	"<",
-	">",
-	".",
-	"?",
-	"/",
-];
+const characters =
+	"abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*?";
+
+const generateButton = document.getElementById("generate-btn");
+
+const PasswordOne = document.getElementById("password1");
+const PasswordTwo = document.getElementById("password2");
+const PasswordThree = document.getElementById("password3");
+const PasswordFour = document.getElementById("password4");
+
+generateButton.addEventListener("click", () => {
+	let generatePasswordOne = "";
+	let generatePasswordTwo = "";
+	let generatePasswordThree = "";
+	let generatePasswordFour = "";
+
+	for (let i = 0; i < 15; i++) {
+		generatePasswordOne += characters.charAt(
+			Math.floor(Math.random() * characters.length)
+		);
+		generatePasswordTwo += characters.charAt(
+			Math.floor(Math.random() * characters.length)
+		);
+		generatePasswordThree += characters.charAt(
+			Math.floor(Math.random() * characters.length)
+		);
+		generatePasswordFour += characters.charAt(
+			Math.floor(Math.random() * characters.length)
+		);
+	}
+	PasswordOne.innerHTML = generatePasswordOne;
+	PasswordTwo.innerHTML = generatePasswordTwo;
+	PasswordThree.innerHTML = generatePasswordThree;
+	PasswordFour.innerHTML = generatePasswordFour;
+});
+
+PasswordOne.addEventListener("click", () => {
+	let currentPasswordOne = PasswordOne.textContent;
+
+	if (currentPasswordOne !== "Copied!") {
+		if (currentPasswordOne !== "Password 1") {
+			navigator.clipboard.writeText(PasswordOne.textContent);
+
+			PasswordOne.textContent = "Copied!";
+
+			setTimeout(function () {
+				PasswordOne.textContent = currentPasswordOne;
+			}, 1000);
+		}
+	}
+});
+
+PasswordTwo.addEventListener("click", () => {
+	let currentPasswordTwo = PasswordTwo.textContent;
+
+	if (currentPasswordTwo !== "Copied!") {
+		if (currentPasswordTwo !== "Password 2") {
+			navigator.clipboard.writeText(PasswordTwo.textContent);
+
+			PasswordTwo.textContent = "Copied!";
+
+			setTimeout(function () {
+				PasswordTwo.textContent = currentPasswordTwo;
+			}, 1000);
+		}
+	}
+});
+
+PasswordThree.addEventListener("click", () => {
+	let currentPasswordThree = PasswordThree.textContent;
+
+	if (currentPasswordThree !== "Copied!") {
+		if (currentPasswordThree !== "Password 3") {
+			navigator.clipboard.writeText(PasswordThree.textContent);
+
+			PasswordThree.textContent = "Copied!";
+
+			setTimeout(function () {
+				PasswordThree.textContent = currentPasswordThree;
+			}, 1000);
+		}
+	}
+});
+
+PasswordFour.addEventListener("click", () => {
+	let currentPasswordFour = PasswordFour.textContent;
+
+	if (currentPasswordFour !== "Copied!") {
+		if (currentPasswordFour !== "Password 4") {
+			navigator.clipboard.writeText(PasswordFour.textContent);
+
+			PasswordFour.textContent = "Copied!";
+
+			setTimeout(function () {
+				PasswordFour.textContent = currentPasswordFour;
+			}, 1000);
+		}
+	}
+});
