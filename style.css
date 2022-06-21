@@ -8,8 +8,8 @@ body {
 .container {
 	font-family: "Karla";
 	margin: 50px auto;
+	padding-block: 1.5em;
 	width: 550px;
-	height: 470px;
 	background: #1f2937;
 	border-radius: 8px;
 }
@@ -35,6 +35,11 @@ input[type="number"] {
 	width: 34px;
 }
 
+input[type="number"]::selection {
+	background-color: rgb(185, 183, 183);
+	color: #505050;
+}
+
 input[type="number"]:focus {
 	color: #d5d4d8;
 	outline: none;
@@ -42,9 +47,14 @@ input[type="number"]:focus {
 	width: 34px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	opacity: 1;
+}
+
 h1 {
+	user-select: none;
 	margin: 0;
-	padding-top: 40px;
 	text-align: left;
 	/* padding-left: 52px; */
 	font-family: "Karla";
@@ -57,8 +67,8 @@ h1 {
 }
 
 h2 {
-	margin: 0;
-	margin-top: 10px;
+	user-select: none;
+	margin: 10px 0 51px 0;
 	color: #d5d4d8;
 	font-family: "Inter";
 	font-style: normal;
@@ -67,6 +77,7 @@ h2 {
 }
 
 h3 {
+	user-select: none;
 	margin: 10px auto;
 	text-align: center;
 
@@ -78,7 +89,8 @@ h3 {
 }
 
 #generate-btn {
-	margin: 51px auto 0;
+	user-select: none;
+	margin: 10px auto 0;
 
 	display: flex;
 	flex-direction: row;
@@ -111,7 +123,7 @@ h3 {
 }
 
 .divide-line {
-	margin: 35px auto 0px auto;
+	margin: 25px auto 0px auto;
 	width: 446px;
 	border: 1px solid #2f3e53;
 }
@@ -121,6 +133,10 @@ h3 {
 	justify-content: center;
 	flex-direction: row;
 	margin-bottom: 24px;
+}
+
+#no-margin {
+	margin-bottom: 8px;
 }
 
 .password-1 {

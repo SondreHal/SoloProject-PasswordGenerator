@@ -12,6 +12,9 @@ const PasswordLength = document.getElementById("passwordLength");
 passwordLength.value = 15;
 
 PasswordLength.focus();
+document.addEventListener("click", () => {
+	passwordLength.focus();
+});
 
 generateButton.addEventListener("click", () => {
 	let generatePasswordOne = "";
