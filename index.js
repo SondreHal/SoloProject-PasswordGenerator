@@ -8,13 +8,18 @@ const PasswordTwo = document.getElementById("password2");
 const PasswordThree = document.getElementById("password3");
 const PasswordFour = document.getElementById("password4");
 
+const PasswordLength = document.getElementById("passwordLength");
+passwordLength.value = 15;
+
+PasswordLength.focus();
+
 generateButton.addEventListener("click", () => {
 	let generatePasswordOne = "";
 	let generatePasswordTwo = "";
 	let generatePasswordThree = "";
 	let generatePasswordFour = "";
 
-	for (let i = 0; i < 15; i++) {
+	for (let i = 0; i < PasswordLength.value; i++) {
 		generatePasswordOne += characters.charAt(
 			Math.floor(Math.random() * characters.length)
 		);
