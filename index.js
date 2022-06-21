@@ -9,7 +9,7 @@ const PasswordThree = document.getElementById("password3");
 const PasswordFour = document.getElementById("password4");
 
 const PasswordLength = document.getElementById("passwordLength");
-passwordLength.value = 15;
+passwordLength.value = 10;
 
 PasswordLength.focus();
 document.addEventListener("click", () => {
