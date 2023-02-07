@@ -16,8 +16,8 @@ body {
 .flex {
 	display: flex;
 }
-.flex_center_h {
-	justify-content: center;
+.flex_space_between {
+	justify-content: space-between;
 }
 .flex_center_v {
 	align-items: center;
@@ -56,6 +56,15 @@ h1 span {
 	font-weight: 400;
 	line-height: 28px;
 	margin: 10px 0 50px;
+}
+
+/* ACTION WRAPPER */
+.action_wrapper {
+	margin: 0 auto;
+	width: fit-content;
+}
+.action_wrapper div:not(:last-of-type) {
+	margin-bottom: 8px;
 }
 
 /* INPUT FOR PASSWORD LENGTH */
