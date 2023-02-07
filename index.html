@@ -49,7 +49,7 @@
 					<p>Password length:</p>
 					<input
 						type="number"
-						id="passwordLength"
+						id="numberInput"
 						min="15"
 						max="18"
 						value="15"
@@ -58,7 +58,12 @@
 				</div>
 
 				<!-- CTA BUTTON -->
-				<button id="generate_pw_btn">Generate passwords</button>
+				<button
+					id="generate_pw_btn"
+					onclick="generatePassword()"
+				>
+					Generate passwords
+				</button>
 
 				<div class="divider"></div>
 
@@ -68,32 +73,32 @@
 				<div class="pw_container_wrapper">
 					<div
 						class="pw_container"
-						id="password_1"
+						onclick="copyPassword(currentPasswordOne, passwordOne)"
 					>
-						<p>Password 1</p>
+						<p id="pw_1">Password 1</p>
 					</div>
 
 					<div
 						class="pw_container"
-						id="password_2"
+						onclick="copyPassword(currentPasswordTwo, passwordTwo)"
 					>
-						<p>Password 2</p>
+						<p id="pw_2">Password 2</p>
 					</div>
 				</div>
 
 				<div class="pw_container_wrapper">
 					<div
 						class="pw_container"
-						id="password_3"
+						onclick="copyPassword(currentPasswordThree, passwordThree)"
 					>
-						<p>Password 3</p>
+						<p id="pw_3">Password 3</p>
 					</div>
 
 					<div
 						class="pw_container"
-						id="password_4"
+						onclick="copyPassword(currentPasswordFour, passwordFour)"
 					>
-						<p>Password 4</p>
+						<p id="pw_4">Password 4</p>
 					</div>
 				</div>
 			</div>
