@@ -14,11 +14,11 @@ function generatePassword() {
 	let generatedPasswordFour = '';
 
 	// TO PREVENT VALUES TO BE < 15 AND > THAN 33, WHILE ALSO SETTING THE VALUE TO CLOSEST OF 15-33 IF THEY ARE OUT OF RANGE
-	const allowedValue = numberInput.value < 15 ? 15 : numberInput.value > 33 ? 33 : numberInput.value;
+	const allowedValue = numberInput.value < 6 ? 6 : numberInput.value > 33 ? 33 : numberInput.value;
 	numberInput.value = allowedValue;
 
-	// TO AVOID CRAZY INPUTS
-	if (numberInput.value < 15 || numberInput.value > 33) return;
+	// TO REJECT VALUES OUT OF RANGE
+	if (numberInput.value < 6 || numberInput.value > 33) return;
 
 	for (let i = 0; i < numberInput.value; i++) {
 		generatedPasswordOne += characters.charAt(Math.floor(Math.random() * characters.length));
