@@ -1,20 +1,19 @@
-const characters =
-	"abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*?";
+const characters = 'abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*?';
 
-const generateButton = document.getElementById("generate-btn");
+const generateButton = document.getElementById('generate_pw_btn');
 
-const passwordOne = document.getElementById("password1");
-const passwordTwo = document.getElementById("password2");
-const passwordThree = document.getElementById("password3");
-const passwordFour = document.getElementById("password4");
+const passwordOne = document.getElementById('password_1');
+const passwordTwo = document.getElementById('password_2');
+const passwordThree = document.getElementById('password_3');
+const passwordFour = document.getElementById('password_4');
 
 passwordLength.blur();
-document.addEventListener("click", () => {
+document.addEventListener('click', () => {
 	passwordLength.blur();
 });
 
-generateButton.addEventListener("click", () => {
-	const passwordLength = document.getElementById("passwordLength");
+generateButton.addEventListener('click', () => {
+	const passwordLength = document.getElementById('passwordLength');
 
 	function update() {
 		console.log(passwordLength.value);
@@ -22,26 +21,18 @@ generateButton.addEventListener("click", () => {
 
 	update();
 
-	let generatePasswordOne = "";
-	let generatePasswordTwo = "";
-	let generatePasswordThree = "";
-	let generatePasswordFour = "";
+	let generatePasswordOne = '';
+	let generatePasswordTwo = '';
+	let generatePasswordThree = '';
+	let generatePasswordFour = '';
 
-	if (passwordLength.value < 6 || passwordLength.value > 18) return;
+	if (passwordLength.value < 15 || passwordLength.value > 18) return;
 
 	for (let i = 0; i < passwordLength.value; i++) {
-		generatePasswordOne += characters.charAt(
-			Math.floor(Math.random() * characters.length)
-		);
-		generatePasswordTwo += characters.charAt(
-			Math.floor(Math.random() * characters.length)
-		);
-		generatePasswordThree += characters.charAt(
-			Math.floor(Math.random() * characters.length)
-		);
-		generatePasswordFour += characters.charAt(
-			Math.floor(Math.random() * characters.length)
-		);
+		generatePasswordOne += characters.charAt(Math.floor(Math.random() * characters.length));
+		generatePasswordTwo += characters.charAt(Math.floor(Math.random() * characters.length));
+		generatePasswordThree += characters.charAt(Math.floor(Math.random() * characters.length));
+		generatePasswordFour += characters.charAt(Math.floor(Math.random() * characters.length));
 	}
 	passwordOne.innerHTML = generatePasswordOne;
 	passwordTwo.innerHTML = generatePasswordTwo;
@@ -49,14 +40,14 @@ generateButton.addEventListener("click", () => {
 	passwordFour.innerHTML = generatePasswordFour;
 });
 
-passwordOne.addEventListener("click", () => {
+passwordOne.addEventListener('click', () => {
 	let currentPasswordOne = passwordOne.textContent;
 
-	if (currentPasswordOne !== "Copied!") {
-		if (currentPasswordOne !== "Password 1") {
+	if (currentPasswordOne !== 'Copied!') {
+		if (currentPasswordOne !== 'Password 1') {
 			navigator.clipboard.writeText(passwordOne.textContent);
 
-			passwordOne.textContent = "Copied!";
+			passwordOne.textContent = 'Copied!';
 
 			setTimeout(function () {
 				passwordOne.textContent = currentPasswordOne;
@@ -65,14 +56,14 @@ passwordOne.addEventListener("click", () => {
 	}
 });
 
-passwordTwo.addEventListener("click", () => {
+passwordTwo.addEventListener('click', () => {
 	let currentPasswordTwo = passwordTwo.textContent;
 
-	if (currentPasswordTwo !== "Copied!") {
-		if (currentPasswordTwo !== "Password 2") {
+	if (currentPasswordTwo !== 'Copied!') {
+		if (currentPasswordTwo !== 'Password 2') {
 			navigator.clipboard.writeText(passwordTwo.textContent);
 
-			passwordTwo.textContent = "Copied!";
+			passwordTwo.textContent = 'Copied!';
 
 			setTimeout(function () {
 				passwordTwo.textContent = currentPasswordTwo;
@@ -81,14 +72,14 @@ passwordTwo.addEventListener("click", () => {
 	}
 });
 
-passwordThree.addEventListener("click", () => {
+passwordThree.addEventListener('click', () => {
 	let currentPasswordThree = passwordThree.textContent;
 
-	if (currentPasswordThree !== "Copied!") {
-		if (currentPasswordThree !== "Password 3") {
+	if (currentPasswordThree !== 'Copied!') {
+		if (currentPasswordThree !== 'Password 3') {
 			navigator.clipboard.writeText(passwordThree.textContent);
 
-			passwordThree.textContent = "Copied!";
+			passwordThree.textContent = 'Copied!';
 
 			setTimeout(function () {
 				passwordThree.textContent = currentPasswordThree;
@@ -97,14 +88,14 @@ passwordThree.addEventListener("click", () => {
 	}
 });
 
-passwordFour.addEventListener("click", () => {
+passwordFour.addEventListener('click', () => {
 	let currentPasswordFour = passwordFour.textContent;
 
-	if (currentPasswordFour !== "Copied!") {
-		if (currentPasswordFour !== "Password 4") {
+	if (currentPasswordFour !== 'Copied!') {
+		if (currentPasswordFour !== 'Password 4') {
 			navigator.clipboard.writeText(passwordFour.textContent);
 
-			passwordFour.textContent = "Copied!";
+			passwordFour.textContent = 'Copied!';
 
 			setTimeout(function () {
 				passwordFour.textContent = currentPasswordFour;
