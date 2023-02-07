@@ -5,7 +5,7 @@ const passwordTwo = document.getElementById('pw_2');
 const passwordThree = document.getElementById('pw_3');
 const passwordFour = document.getElementById('pw_4');
 
-const generatePassword = () => {
+function generatePassword() {
 	const numberInput = document.getElementById('numberInput');
 
 	let generatedPasswordOne = '';
@@ -22,24 +22,22 @@ const generatePassword = () => {
 		generatedPasswordThree += characters.charAt(Math.floor(Math.random() * characters.length));
 		generatedPasswordFour += characters.charAt(Math.floor(Math.random() * characters.length));
 	}
-	passwordOne.innerHTML = generatedPasswordOne;
-	passwordTwo.innerHTML = generatedPasswordTwo;
-	passwordThree.innerHTML = generatedPasswordThree;
-	passwordFour.innerHTML = generatedPasswordFour;
-};
+	passwordOne.textContent = generatedPasswordOne;
+	passwordTwo.textContent = generatedPasswordTwo;
+	passwordThree.textContent = generatedPasswordThree;
+	passwordFour.textContent = generatedPasswordFour;
+}
 
-const copyPassword = (currentPassword, uniquePassword) => {
-	let currentPassword = uniquePassword.textContent;
+const copyPassword = (password, num) => {
+	const test = password.textContent;
 
-	if (currentPassword !== 'Copied!') {
-		if (currentPassword !== 'Password 1') {
-			navigator.clipboard.writeText(uniquePassword.textContent);
+	if (test !== 'Copied!' && test !== 'Password ' + num) {
+		navigator.clipboard.writeText(test);
 
-			uniquePassword.textContent = 'Copied!';
+		password.textContent = 'Copied!';
 
-			setTimeout(function () {
-				uniquePassword.textContent = currentPassword;
-			}, 1000);
-		}
+		setTimeout(function () {
+			password.textContent = test;
+		}, 800);
 	}
 };
