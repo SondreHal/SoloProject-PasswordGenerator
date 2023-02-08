@@ -97,9 +97,10 @@ input[type='number']:focus + .tooltip_text {
 	border-radius: 4px;
 	color: #000000;
 	display: none;
-	margin: 0 0 4rem 4rem;
+	margin: 0 0 5.5rem 4rem;
 	padding: 4px 8px;
 	position: absolute;
+	text-align: center;
 }
 
 #generate_pw_btn {
