@@ -73,7 +73,6 @@ input[type='number'] {
 	border: 1px solid #d5d4d8;
 	color: #ffffff;
 	height: 1.5rem;
-	margin-left: 0.6rem;
 	padding-inline: 0.4rem 0.1rem;
 	width: 3rem;
 }
@@ -84,6 +83,23 @@ input[type='number']:focus {
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
 	opacity: 1;
+}
+/* TO SHOW TOOLTIP WHEN NUMBER INPUT IS IN FOCUS */
+input[type='number']:focus + .tooltip_text {
+	display: initial;
+}
+
+.input_wrapper {
+	position: relative;
+}
+.tooltip_text {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 4px;
+	color: #000000;
+	display: none;
+	margin: 0 0 4rem 4rem;
+	padding: 4px 8px;
+	position: absolute;
 }
 
 #generate_pw_btn {
