@@ -9,7 +9,7 @@
 body {
 	background-color: black;
 	color: white;
-	padding: 5rem 1.5rem;
+	padding-top: 3rem;
 }
 
 /* FLEX PROPERTIES */
@@ -167,24 +167,27 @@ input[type='number']:focus + .tooltip_text {
 	word-break: break-all;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 	body {
-		padding: 1.5rem;
+		padding: 0;
 	}
-
 	.wrapper {
 		padding: 4rem 1.5em;
 	}
 }
 @media screen and (max-width: 455px) {
-	body {
-		padding: 0;
-	}
-
 	h1 {
 		font-size: 32px;
 	}
 	.text_sub_header {
 		font-size: 18px;
+	}
+}
+@media screen and (max-width: 350px) {
+	h1 {
+		font-size: 28px;
+	}
+	.text_sub_header {
+		font-size: 16px;
 	}
 }
