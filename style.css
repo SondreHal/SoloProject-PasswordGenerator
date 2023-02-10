@@ -152,6 +152,8 @@ input[type='number']:focus + .tooltip_text {
 	border-radius: 6px;
 	padding: 4px 8px;
 	width: 210px;
+	display: grid;
+	place-items: center;
 }
 .pw_container:hover {
 	background-color: #32445c;
