@@ -24,6 +24,11 @@
 			rel="stylesheet"
 		/>
 		<link
+			rel="icon"
+			type="image/png"
+			href="images/yo.png"
+		/>
+		<link
 			rel="stylesheet"
 			href="style.css"
 		/>
@@ -54,6 +59,7 @@
 							min="6"
 							max="33"
 							value="9"
+							oninput="this.value = this.value.replace(/[^0-9]/g, '')"
 						/>
 						<p class="tooltip_text">Can have 6-33 characters</p>
 					</div>
